@@ -6,7 +6,7 @@ body {
 }
 
 form {
-  margin-top: 45vh;
+  margin-top: 20vh;
 
   transform: translateY(-50%);
   text-align: center;
@@ -69,4 +69,13 @@ ul {
   transition-property: width;
 
   background-color: rgba(0, 0, 0, 0.25);
+}
+
+p {
+  margin-top: 10vw;
+
+  text-align: center;
+
+  font-size: 4vw;
+  font-weight: 900;
 }

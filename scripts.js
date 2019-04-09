@@ -2,14 +2,13 @@ const form = document.querySelector('form')
 const tasks = document.querySelector('ul')
 const progress = document.querySelector('.progress')
 
-const WORK_TIME = 10000
+const WORK_TIME = 100000
 
 function startTimer(e) {
   e.preventDefault()
   const input = e.target.querySelector('input')
 
   input.disabled = true
-
 
   const key = Date.now()
 
@@ -35,7 +34,6 @@ function loadHistory() {
 
   const historySize = localStorage.length
 
-
   if (historySize > 0) {
 
     for (let i = 0; i < historySize; i++) {
@@ -49,6 +47,12 @@ function loadHistory() {
       tasks.appendChild(listItem)
     }
   }
+}
+
+function soundClick() {
+  var audio = new Audio(); 
+  audio.src = 'sound.mp3';
+  audio.autoplay = true;
 }
 
 form.onsubmit = startTimer
