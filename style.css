@@ -1,5 +1,5 @@
 @import "reset.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,900,900i&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900,900i');
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -13,7 +13,7 @@ form {
 }
 
 input {
-  padding-bottom: 0.25em;
+  padding-bottom: 0.15em;
 
   transition: border-bottom 300ms ease;
   text-align: center;
@@ -24,7 +24,7 @@ input {
   font-size: 8vw;
   font-weight: 900;
 
-  caret-color: red;
+  caret-color: rgb(255, 0, 0);
 }
 
 input::placeholder {
@@ -33,7 +33,19 @@ input::placeholder {
   font-style: italic;
 }
 
+input:focus {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+  outline: none;
+}
+
+input:disabled {
+  color: rgba(0, 0, 0, 0.45);
+}
+
 ul {
+  display: flex;
+  flex-direction: column-reverse;
+
   list-style: none;
 
   text-align: center;
@@ -43,4 +55,18 @@ ul {
 
   font-size: 4vw;
   line-height: 2;
+}
+
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 100vh;
+
+  transition-timing-function: ease;
+  transition-property: width;
+
+  background-color: rgba(0, 0, 0, 0.25);
 }
